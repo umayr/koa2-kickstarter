@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "pretest": "npm run lint || true",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "ava -v",
     "start": "node bin/server",
     "watch": "nodemon bin/server",
     "lint": "eslint src",
@@ -27,10 +27,15 @@
     "koa-router": "^7.0.1"
   },
   "devDependencies": {
+    "ava": "^0.14.0",
     "babel-eslint": "^6.0.4",
     "eslint": "^2.10.2",
     "eslint-config-airbnb-base": "^3.0.1",
     "eslint-plugin-import": "^1.8.0",
     "nodemon": "^1.9.2"
+  },
+  "ava": {
+    "babel": "inherit",
+    "require": ["babel-register"]
   }
 }
