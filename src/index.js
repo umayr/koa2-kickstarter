@@ -6,8 +6,8 @@ import Debug from 'debug';
 import jsonMiddleware from 'koa-json';
 import loggerMiddleware from 'koa-bunyan-logger';
 
-import requestMiddleware from './middleware/request';
-import errorMiddleware from './middleware/error';
+import requestMiddleware from 'middleware/request';
+import errorMiddleware from 'middleware/error';
 
 import routeMiddleware from './route';
 
