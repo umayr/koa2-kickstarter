@@ -1,5 +1,6 @@
 import convict from 'convict';
-import path from 'path';
+import fs from 'fs';
+import debug from 'debug';
 
 const conf = convict({
   env: {
@@ -21,9 +22,19 @@ const conf = convict({
     env: 'PORT',
   },
 });
-
+const d = debug('koa-play:conf');
 const env = conf.get('env');
-conf.loadFile(path.join(`${__dirname}/${env}.json`));
+try {
+  const path = `${__dirname}/${env}.json`;
+
+  d('trying to access %s', path);
+  fs.accessSync(path, fs.F_OK);
+
+  conf.loadFile(path);
+} catch (error) {
+  d('file doesn\'t exist, loading defaults');
+}
+
 conf.validate({ strict: true });
 
 export default conf;
