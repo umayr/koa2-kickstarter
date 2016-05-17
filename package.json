@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node bin/server",
-    "watch": "DEBUG=koa-play:* nodemon bin/server"
+    "start": "DEBUG=koa-play:* node bin/server",
+    "watch": "DEBUG=koa-play:* nodemon bin/server",
+    "lint": "eslint src"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Umayr Shahid <umayrr@hotmail.co.uk>",
+  "license": "MIT",
   "dependencies": {
     "babel-core": "^6.8.0",
     "babel-preset-es2015-node5": "^1.2.0",
@@ -24,7 +25,10 @@
     "koa-router": "^7.0.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.8.0",
+    "babel-eslint": "^6.0.4",
+    "eslint": "^2.10.2",
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-import": "^1.8.0",
     "nodemon": "^1.9.2"
   }
 }
