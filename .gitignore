@@ -34,3 +34,6 @@ node_modules
 
 # IDE configuration directory
 .idea
+
+# Configuration files
+conf/*.json

@@ -6,6 +6,7 @@ import Debug from 'debug';
 import jsonMiddleware from 'koa-json';
 import loggerMiddleware from 'koa-bunyan-logger';
 
+import conf from './conf';
 import * as User from './route/user';
 
 const app = new Koa();
@@ -43,5 +44,6 @@ app.use(async(ctx, next) => {
 app.use(User.Routes);
 app.use(User.AllowedMethod);
 
-debug('server started at port: %d', 4000);
-app.listen(4000);
+debug('current environment: %s', conf.get('env'));
+debug('server started at port: %d', conf.get('port'));
+app.listen(conf.get('port'));
