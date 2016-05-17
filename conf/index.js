@@ -1,3 +1,5 @@
+'use strict';
+
 import convict from 'convict';
 import path from 'path';
 
