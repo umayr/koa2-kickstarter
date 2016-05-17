@@ -36,4 +36,4 @@ node_modules
 .idea
 
 # Configuration files
-conf/*.json
+src/conf/*.json
