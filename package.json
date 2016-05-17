@@ -4,10 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "pretest": "npm run lint || true",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "DEBUG=koa-play:* node bin/server",
-    "watch": "DEBUG=koa-play:* nodemon bin/server",
-    "lint": "eslint src"
+    "start": "node bin/server",
+    "watch": "nodemon bin/server",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix"
   },
   "author": "Umayr Shahid <umayrr@hotmail.co.uk>",
   "license": "MIT",
