@@ -1,34 +1,45 @@
 'use strict';
 
 import Koa from 'koa';
-import json from 'koa-json';
 import Debug from 'debug';
+
+import jsonMiddleware from 'koa-json';
+import loggerMiddleware from 'koa-bunyan-logger';
 
 import * as User from './route/user';
 
 const app = new Koa();
 const debug = Debug('koa-play:root');
 
-// Register middleware to handle json
-app.use(json());
+// Register middleware
+app.use(jsonMiddleware());
+app.use(loggerMiddleware());
+
+app.use(async (ctx, next) => {
+    ctx.log.info(`request from ${ctx.request.ip} to ${ctx.path}`);
+    await next();
+});
 
 app.use(async(ctx, next) => {
     try {
         await next();
     } catch (error) {
-        debug('error occurred: %j', error);
-        
+        ctx.log.error(error);
+
         if (error.isBoom) {
             ctx.body = error.output.payload;
             ctx.status = error.output.statusCode;
 
             return;
+        } else {
+            // TODO: Handle error that are not instance of `boom`
         }
         throw error;
     }
 });
 
-// Registers routes and allowed method middlewares for different routes
+// Registers routes and allowed method middleware for different routes
+// FIXME: This should be simplified
 app.use(User.Routes);
 app.use(User.AllowedMethod);
 
