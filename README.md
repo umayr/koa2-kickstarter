@@ -37,8 +37,22 @@
 - [Ava](https://github.com/avajs/ava) For unit tests.
 - [Boom](https://github.com/hapijs/boom) HTTP Errors.
 - [Convict](https://github.com/mozilla/node-convict) Configuration management.
-- [Babel](https://github.com/babel/babel) 
+- [Babel](https://github.com/babel/babel) Support ES6/ES7 features.
 - [ESLint](https://github.com/eslint/eslint/) Linting purposes (comes with extended Airbnb's base eslint configurations).
 - [Nodemon](https://github.com/remy/nodemon) Restart the server automatically (hot-reloading).
 
 And many more small packages.
+
+### Scripts
+
+- `npm start` - simply starts the server
+- `npm test` - execute all unit tests
+- `npm run lint` - lints all the files in `src/` folder
+- `npm run lint:fix` - fixes all the possible linting errors
+- `npm run watch` - starts the server with hot-reloading
+
+**Suggestion:** To turn on debug messages, set `DEBUG` environment variable to `kickstarter:*`
+
+### License
+
+[MIT](https://raw.githubusercontent.com/umayr/koa2-kickstarter/master/LICENSE?token=AC7fzOqmYJf5mPTsJ9sWZ6QPNSfuBhLlks5XROMFwA%3D%3D) - Umayr Shahid <umayrr@hotmail.co.uk> 
