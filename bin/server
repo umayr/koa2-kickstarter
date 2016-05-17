@@ -4,4 +4,4 @@
 require('babel-core/register');
 
 // register application
-require('..');
+require('../src');
