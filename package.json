@@ -1,8 +1,8 @@
 {
-  "name": "koa-play",
+  "name": "koa2-kickstarter",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "An opinionated boilerplate for koa2 with batteries included",
+  "main": "src/index.js",
   "scripts": {
     "pretest": "npm run lint || true",
     "test": "ava -v",
