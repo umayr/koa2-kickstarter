@@ -22,7 +22,7 @@ const conf = convict({
     env: 'PORT',
   },
 });
-const d = debug('koa-play:conf');
+const d = debug('kickstarter:conf');
 const env = conf.get('env');
 try {
   const path = `${__dirname}/${env}.json`;

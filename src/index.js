@@ -12,7 +12,7 @@ import routeMiddleware from './route';
 import conf from './conf';
 
 const app = new Koa();
-const d = debug('koa-play:root');
+const d = debug('kickstarter:root');
 
 // Register middleware
 app.use(jsonMiddleware());
