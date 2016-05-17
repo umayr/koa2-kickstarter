@@ -1,5 +1,5 @@
 ## `koa2-kickstarter`
-> An opinionated boilerplate for koa2 with batteries included.
+> An opinionated boilerplate for koa v2 with batteries included.
 
 ### Setup
 ```bash
@@ -55,4 +55,4 @@ And many more small packages.
 
 ### License
 
-[MIT](https://raw.githubusercontent.com/umayr/koa2-kickstarter/master/LICENSE?token=AC7fzOqmYJf5mPTsJ9sWZ6QPNSfuBhLlks5XROMFwA%3D%3D) - Umayr Shahid <umayrr@hotmail.co.uk> 
+[MIT](https://raw.githubusercontent.com/umayr/koa2-kickstarter/master/LICENSE?token=AC7fzOqmYJf5mPTsJ9sWZ6QPNSfuBhLlks5XROMFwA%3D%3D) - Umayr Shahid <<umayrr@hotmail.co.uk>>
