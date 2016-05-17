@@ -1,7 +1,7 @@
 {
   "name": "koa2-kickstarter",
   "version": "1.0.0",
-  "description": "An opinionated boilerplate for koa2 with batteries included",
+  "description": "An opinionated boilerplate for koa v2 with batteries included",
   "main": "src/index.js",
   "scripts": {
     "pretest": "npm run lint || true",
