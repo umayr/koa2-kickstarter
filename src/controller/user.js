@@ -1,5 +1,7 @@
+import { getUsers } from '../service/user';
+
 export const get = (ctx) => {
-  ctx.body = { response: '[GET]: /user', time: Date.now() };
+  ctx.body = { users: getUsers(), time: Date.now() };
 };
 
 export const post = (ctx) => {
