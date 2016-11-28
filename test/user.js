@@ -15,3 +15,10 @@ test('should return valid names', t => {
   t.not(raylan, undefined);
   t.not(winona, undefined);
 });
+
+
+test('should one valid user name', t => {
+  const name = service.getFirstUser();
+
+  t.not(name, undefined);
+});
