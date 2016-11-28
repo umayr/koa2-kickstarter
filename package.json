@@ -4,7 +4,7 @@
   "description": "An opinionated boilerplate for koa v2 with batteries included",
   "main": "src/index.js",
   "scripts": {
-    "pretest": "npm run lint || true",
+    "pretest": "eslint src || true",
     "test": "ava -v",
     "start": "node bin/server",
     "watch": "nodemon bin/server",
@@ -14,12 +14,11 @@
   "author": "Umayr Shahid <umayrr@hotmail.co.uk>",
   "license": "MIT",
   "dependencies": {
-    "babel-core": "^6.8.0",
-    "babel-preset-es2015-node5": "^1.2.0",
-    "babel-preset-stage-3": "^6.5.0",
-    "boom": "^3.1.3",
-    "convict": "^1.3.0",
-    "debug": "^2.2.0",
+    "babel-core": "^6.18.2",
+    "babel-preset-koa2-node7": "^0.1.0",
+    "boom": "^4.2.0",
+    "convict": "^1.5.0",
+    "debug": "^2.3.3",
     "koa": "^2.0.0",
     "koa-bunyan-logger": "^2.0.0-pre1",
     "koa-compose": "^3.1.0",
@@ -27,15 +26,18 @@
     "koa-router": "^7.0.1"
   },
   "devDependencies": {
-    "ava": "^0.14.0",
-    "babel-eslint": "^6.0.4",
-    "eslint": "^2.10.2",
-    "eslint-config-airbnb-base": "^3.0.1",
-    "eslint-plugin-import": "^1.8.0",
-    "nodemon": "^1.9.2"
+    "ava": "^0.17.0",
+    "babel-eslint": "^7.1.1",
+    "babel-runtime": "^6.18.0",
+    "eslint": "^3.11.0",
+    "eslint-config-airbnb-base": "^10.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "nodemon": "^1.11.0"
   },
   "ava": {
     "babel": "inherit",
-    "require": ["babel-register"]
+    "require": [
+      "babel-register"
+    ]
   }
 }
