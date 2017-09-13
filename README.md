@@ -12,6 +12,12 @@
   # run the project
   λ npm start
 ```
+or execute the script
+```
+  λ curl -sSL https://git.io/v5yGw | bash
+  # with a project name
+  λ curl -sSL https://git.io/v5yGw | bash -s new-app
+```
 
 ### Structure
 ```bash
