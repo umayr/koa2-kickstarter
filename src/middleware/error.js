@@ -12,8 +12,14 @@ const handler = async (ctx, next) => {
 
       return;
     }
-    // TODO: Handle error that are not instance of `boom`
+    
+    if (error instanceof Error) {
+      ctx.body = error.message;
+      ctx.status = error.statusCode || 500;
 
+      return;
+    }
+    
     throw error;
   }
 };
